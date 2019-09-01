@@ -5,8 +5,8 @@
 [![Travis](https://img.shields.io/travis/flo-sch/semantic-release-contributors.svg)](https://travis-ci.org/flo-sch/semantic-release-contributors)
 [![Codecov](https://img.shields.io/codecov/c/github/flo-sch/semantic-release-contributors.svg)](https://codecov.io/gh/flo-sch/semantic-release-contributors)
 
-[![npm latest version](https://img.shields.io/npm/v/flo-sch/semantic-release-contributors/latest.svg)](https://www.npmjs.com/package/flo-sch/semantic-release-contributors)
-[![npm next version](https://img.shields.io/npm/v/flo-sch/semantic-release-contributors/next.svg)](https://www.npmjs.com/package/flo-sch/semantic-release-contributors)
+[![npm latest version](https://img.shields.io/npm/v/semantic-release-contributors/latest.svg)](https://www.npmjs.com/package/flo-sch/semantic-release-contributors)
+[![npm next version](https://img.shields.io/npm/v/semantic-release-contributors/next.svg)](https://www.npmjs.com/package/flo-sch/semantic-release-contributors)
 
 | Step      | Description                                               |
 |-----------|-----------------------------------------------------------|
