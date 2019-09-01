@@ -9,15 +9,46 @@
 [![npm latest version](https://img.shields.io/npm/v/semantic-release-contributors/latest.svg)](https://www.npmjs.com/package/flo-sch/semantic-release-contributors)
 [![npm next version](https://img.shields.io/npm/v/semantic-release-contributors/next.svg)](https://www.npmjs.com/package/flo-sch/semantic-release-contributors)
 
-| Step      | Description                                               |
-|-----------|-----------------------------------------------------------|
-| `prepare` | Determine the contributors list by analyzing git history. |
+| Step           | Description                                                                                                |
+|----------------|------------------------------------------------------------------------------------------------------------|
+| `prepare`      | Determine the contributors list by analyzing git history.                                                  |
 
 ## Install
 
 ```bash
 $ npm install semantic-release-contributors -D
 ```
+
+## How does it work?
+
+Whenener someone commit to the project, his/her name will be appended to the [contributors list of your package.json](https://docs.npmjs.com/files/package.json#people-fields-author-contributors) file.
+
+If `Paul Smith` commits to a project with the following set-up:
+
+```json
+{
+  "name": "your-project",
+  "author": "Barney Rubble <b@rubble.com>",
+  "contributors": [
+    "John Doe <j@doe.com> (https://johndoe.com)"
+  ]
+}
+```
+
+The `package.json` file would then be updated to:
+
+```json
+{
+  "name": "your-project",
+  "author": "Barney Rubble <b@rubble.com>",
+  "contributors": [
+    "John Doe <j@doe.com> (https://johndoe.com)",
+    "Paul Smith <p.smith@domain.tld>"
+  ]
+}
+```
+
+**NOTE**: this package internally deserialize the contributors to objects (name, email, url) and make sure duplicated emails are removed. Contributors objects are then potentially re-serialized before being written to the package file (unless you opt for a different format)
 
 ## Usage
 
