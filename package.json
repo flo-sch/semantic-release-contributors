@@ -76,7 +76,7 @@
     "semantic-release": "^15.13.24",
     "sinon": "^7.4.1",
     "tempy": "^0.3.0",
-    "xo": "^0.24.0"
+    "xo": "^0.25.0"
   },
   "peerDependencies": {
     "semantic-release": ">=15.9.0 <16.0.0"
