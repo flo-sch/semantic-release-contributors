@@ -65,7 +65,7 @@
     "@semantic-release/github": "^5.4.3",
     "@semantic-release/npm": "^5.1.15",
     "@semantic-release/release-notes-generator": "^7.3.0",
-    "ava": "^2.3.0",
+    "ava": "^3.0.0",
     "codecov": "^3.5.0",
     "commitizen": "^4.0.3",
     "cz-conventional-changelog": "^3.0.2",
