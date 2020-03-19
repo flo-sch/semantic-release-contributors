@@ -51,7 +51,7 @@
   },
   "dependencies": {
     "aggregate-error": "^3.0.0",
-    "fs-extra": "^8.1.0",
+    "fs-extra": "^9.0.0",
     "lodash": "^4.17.15",
     "parse-author": "^2.0.0",
     "stringify-author": "^0.1.3"
