@@ -16,7 +16,7 @@
     "tag": "next"
   },
   "engines": {
-    "node": ">=8.3"
+    "node": ">=10.18"
   },
   "files": [
     "lib",
@@ -104,6 +104,9 @@
   },
   "xo": {
     "prettier": true,
-    "space": true
+    "space": true,
+    "rules": {
+      "unicorn/string-content": "off"
+    }
   }
 }
