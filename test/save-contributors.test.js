@@ -30,7 +30,7 @@ test('Throw an error if the package file does not exists', async t => {
     await saveContributors('not-existing-file.json');
   });
   t.is(error.code, 'ENOENT');
-  t.regex(error.message, new RegExp('no such file or directory', 'i'));
+  t.regex(error.message, /no such file or directory/i);
 });
 
 test('Save an updated list of contributors in "string" format', async t => {
