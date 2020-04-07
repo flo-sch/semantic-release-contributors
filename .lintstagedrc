@@ -1,6 +1,5 @@
 {
   "{lib,test}/**/*": [
-    "yarn lint --fix",
-    "git add"
+    "yarn lint --fix"
   ]
 }
