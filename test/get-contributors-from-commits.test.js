@@ -2,7 +2,7 @@ import test from 'ava';
 import {stub} from 'sinon';
 import getContributors from '../lib/get-contributors-from-commits';
 
-test.beforeEach(t => {
+test.beforeEach((t) => {
   // Stub the logger functions
   const log = stub();
   t.context.log = log;
@@ -16,13 +16,13 @@ test.beforeEach(t => {
   };
 });
 
-test('Extract an empty list if the commit list is empty', t => {
+test('Extract an empty list if the commit list is empty', (t) => {
   const contributors = getContributors();
 
   t.is(contributors.length, 0);
 });
 
-test('Extract a list of contributors from a commits list', t => {
+test('Extract a list of contributors from a commits list', (t) => {
   const firstCommiterName = 'John Doe';
   const secondCommiterEmail = 'john.smith@domain.tld';
 
@@ -48,7 +48,7 @@ test('Extract a list of contributors from a commits list', t => {
   t.is(contributors[1].email, secondCommiterEmail);
 });
 
-test('Removes duplicates email from the commiters list', t => {
+test('Removes duplicates email from the commiters list', (t) => {
   const name = 'John Doe';
   const email = 'john.doe@domain.tld';
 
@@ -77,5 +77,5 @@ test('Removes duplicates email from the commiters list', t => {
   ]);
 
   t.is(contributors.length, 2);
-  t.is(contributors.filter(contributor => contributor.email === email).length, 1);
+  t.is(contributors.filter((contributor) => contributor.email === email).length, 1);
 });

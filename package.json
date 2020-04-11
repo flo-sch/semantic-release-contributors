@@ -72,11 +72,11 @@
     "husky": "^4.2.3",
     "lint-staged": "^10.0.3",
     "nyc": "^14.1.1",
-    "prettier": "^1.18.2",
+    "prettier": "^2.0.4",
     "semantic-release": "^17.0.4",
     "sinon": "^7.4.1",
     "tempy": "^0.3.0",
-    "xo": "^0.28.3"
+    "xo": "^0.29.0"
   },
   "peerDependencies": {
     "semantic-release": ">=17.0.4 <18.0.0"

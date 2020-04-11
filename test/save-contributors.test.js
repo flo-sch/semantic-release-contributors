@@ -5,7 +5,7 @@ import tempy from 'tempy';
 import {outputJson, readJson} from 'fs-extra';
 import saveContributors from '../lib/save-contributors';
 
-test.beforeEach(t => {
+test.beforeEach((t) => {
   // Stub the logger functions
   const log = stub();
   t.context.log = log;
@@ -19,13 +19,13 @@ test.beforeEach(t => {
   };
 });
 
-test('Throw an error if the package file path is undefined', async t => {
+test('Throw an error if the package file path is undefined', async (t) => {
   await t.throwsAsync(async () => {
     await saveContributors(undefined);
   });
 });
 
-test('Throw an error if the package file does not exists', async t => {
+test('Throw an error if the package file does not exists', async (t) => {
   const error = await t.throwsAsync(async () => {
     await saveContributors('not-existing-file.json');
   });
@@ -33,7 +33,7 @@ test('Throw an error if the package file does not exists', async t => {
   t.regex(error.message, /no such file or directory/i);
 });
 
-test('Save an updated list of contributors in "string" format', async t => {
+test('Save an updated list of contributors in "string" format', async (t) => {
   const cwd = tempy.directory();
   const filepath = path.resolve(cwd, 'package.json');
   const email = 'john.smith@domain.tld';
@@ -69,7 +69,7 @@ test('Save an updated list of contributors in "string" format', async t => {
   t.is(typeof pkg.contributors[1], 'string');
 });
 
-test('Save an updated list of contributors in "object" format', async t => {
+test('Save an updated list of contributors in "object" format', async (t) => {
   const cwd = tempy.directory();
   const filepath = path.resolve(cwd, 'package.json');
   const email = 'john.doe@domain.tld';
