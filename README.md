@@ -8,7 +8,6 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/0c542e19db095ddb9947/maintainability)](https://codeclimate.com/github/flo-sch/semantic-release-contributors/maintainability)
 
 [![npm latest version](https://img.shields.io/npm/v/semantic-release-contributors/latest.svg)](https://www.npmjs.com/package/semantic-release-contributors)
-[![npm next version](https://img.shields.io/npm/v/semantic-release-contributors/next.svg)](https://www.npmjs.com/package/semantic-release-contributors)
 
 | Step           | Description                                                                                                |
 |----------------|------------------------------------------------------------------------------------------------------------|
