@@ -4,7 +4,7 @@ import {outputJson, readJson} from 'fs-extra';
 import {spy} from 'sinon';
 import tempy from 'tempy';
 
-test.beforeEach(t => {
+test.beforeEach((t) => {
   t.context.m = require('..');
 
   const log = spy();
@@ -19,7 +19,7 @@ test.beforeEach(t => {
   };
 });
 
-test('Throws an error if package.json is not provided', async t => {
+test('Throws an error if package.json is not provided', async (t) => {
   await t.throwsAsync(
     t.context.m.prepare(
       {
@@ -33,7 +33,7 @@ test('Throws an error if package.json is not provided', async t => {
   );
 });
 
-test('Do not change the list if there is no new commit', async t => {
+test('Do not change the list if there is no new commit', async (t) => {
   const cwd = tempy.directory();
   const filepath = path.resolve(cwd, 'package.json');
   const email = 'john.doe@domain.tld';
@@ -68,7 +68,7 @@ test('Do not change the list if there is no new commit', async t => {
   t.is(pkg.contributors[0].email, email);
 });
 
-test('Update the list of contributors', async t => {
+test('Update the list of contributors', async (t) => {
   const cwd = tempy.directory();
   const filepath = path.resolve(cwd, 'package.json');
   const email = 'john.doe@domain.tld';
@@ -109,7 +109,7 @@ test('Update the list of contributors', async t => {
   t.is(typeof pkg.contributors[1], 'string');
 });
 
-test('Works in a sub-directory', async t => {
+test('Works in a sub-directory', async (t) => {
   const cwd = tempy.directory();
   const filepath = path.resolve(cwd, 'dist/package.json');
   const email = 'john.doe@domain.tld';

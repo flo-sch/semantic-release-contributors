@@ -2,7 +2,7 @@ import test from 'ava';
 import {stub} from 'sinon';
 import mergeContributors from '../lib/merge-contributors';
 
-test.beforeEach(t => {
+test.beforeEach((t) => {
   // Stub the logger functions
   const log = stub();
   t.context.log = log;
@@ -16,13 +16,13 @@ test.beforeEach(t => {
   };
 });
 
-test('Merge empty arrays into one', t => {
+test('Merge empty arrays into one', (t) => {
   const mergedContributors = mergeContributors();
 
   t.is(mergedContributors.length, 0);
 });
 
-test('Merge arrays of contributors', t => {
+test('Merge arrays of contributors', (t) => {
   const name = 'John Doe';
   const email = 'john.smith@domain.tld';
   const mergedContributors = mergeContributors(
@@ -45,7 +45,7 @@ test('Merge arrays of contributors', t => {
   t.is(mergedContributors[1].email, email);
 });
 
-test('Removes duplicated emails', t => {
+test('Removes duplicated emails', (t) => {
   const email = 'john.smith@domain.tld';
   const mergedContributors = mergeContributors(
     [
@@ -71,10 +71,10 @@ test('Removes duplicated emails', t => {
   );
 
   t.is(mergedContributors.length, 2);
-  t.is(mergedContributors.filter(contributor => contributor.email === email).length, 1);
+  t.is(mergedContributors.filter((contributor) => contributor.email === email).length, 1);
 });
 
-test('Works with strings and objects', t => {
+test('Works with strings and objects', (t) => {
   const email = 'john.smith@domain.tld';
   const mergedContributors = mergeContributors(
     [
@@ -94,5 +94,5 @@ test('Works with strings and objects', t => {
   );
 
   t.is(mergedContributors.length, 3);
-  t.is(mergedContributors.filter(contributor => contributor.email === email).length, 1);
+  t.is(mergedContributors.filter((contributor) => contributor.email === email).length, 1);
 });
