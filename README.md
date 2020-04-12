@@ -29,10 +29,10 @@
   <a href="https://www.npmjs.com/package/semantic-release-contributors" rel="nofollow">
     <img alt="npm latest version" src="https://img.shields.io/npm/v/semantic-release-contributors/latest.svg">
   </a>
-  <a href="https://bundlephobia.com/result?p=semantic-release-contributors@2.0.2" rel="nofollow">
+  <a href="https://bundlephobia.com/result?p=semantic-release-contributors" rel="nofollow">
     <img alt="npm bundle size" src="https://img.shields.io/bundlephobia/min/semantic-release-contributors">
   </a>
-  <a href="https://bundlephobia.com/result?p=semantic-release-contributors@2.0.2" rel="nofollow">
+  <a href="https://bundlephobia.com/result?p=semantic-release-contributors" rel="nofollow">
     <img alt="npm bundle size" src="https://img.shields.io/bundlephobia/minzip/semantic-release-contributors">
   </a>
   <a href="https://img.shields.io/npm/l/semantic-release-contributors" rel="nofollow">
