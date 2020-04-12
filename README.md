@@ -62,13 +62,21 @@ to the package file (unless you opt for a different format)
 
 The plugin can be configured in the [**semantic-release** configuration file](https://github.com/semantic-release/semantic-release/blob/master/docs/usage/configuration.md#configuration):
 
+**IMPORTANT**: since this plugin acts on semantic-release's "prepare" step
+and do not commit the updated package.json file itself,
+it *requires* to be placed *before* "@semantic-release/git".
+
 ```json
 {
   "plugins": [
+    // important: insert it before @semantic-release/git
     ["semantic-release-contributors", {
       "format": "string",
       "pkgRoot": "."
-    }]
+    }],
+    // ...
+    "@semantic-release/git"
+    // ...
   ]
 }
 ```
