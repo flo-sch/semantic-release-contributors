@@ -1,6 +1,7 @@
 # **contributors**
 
-[**semantic-release**](https://github.com/semantic-release/semantic-release) plugin to automatically update contributors list from git history
+[**semantic-release**](https://github.com/semantic-release/semantic-release)
+plugin to automatically update contributors list based on commits history
 
 [![Travis](https://img.shields.io/travis/flo-sch/semantic-release-contributors.svg)](https://travis-ci.org/flo-sch/semantic-release-contributors)
 [![Codecov](https://img.shields.io/codecov/c/github/flo-sch/semantic-release-contributors.svg)](https://codecov.io/gh/flo-sch/semantic-release-contributors)
@@ -12,19 +13,20 @@
 ![npm bundle size](https://img.shields.io/bundlephobia/minzip/semantic-release-contributors)
 ![NPM](https://img.shields.io/npm/l/semantic-release-contributors)
 
-| Step           | Description                                                                                                |
-|----------------|------------------------------------------------------------------------------------------------------------|
-| `prepare`      | Determine the contributors list by analyzing git history.                                                  |
+| Step           | Description                                                      |
+|----------------|------------------------------------------------------------------|
+| `prepare`      | Determine the contributors list by analyzing commits history.    |
 
 ## Install
 
 ```bash
-$ npm install semantic-release-contributors -D
+npm install semantic-release-contributors -D
 ```
 
-## How does it work?
+## How does it work
 
-Whenener someone commit to the project, his/her name will be appended to the [contributors list of your package.json](https://docs.npmjs.com/files/package.json#people-fields-author-contributors) file.
+Whenener someone commit to the project, his/her name will be appended
+to the [contributors list of your package.json](https://docs.npmjs.com/files/package.json#people-fields-author-contributors) file.
 
 If `Paul Smith` commits to a project with the following set-up:
 
@@ -51,7 +53,10 @@ The `package.json` file would then be updated to:
 }
 ```
 
-**NOTE**: this package internally deserialize the contributors to objects (name, email, url) and make sure duplicated emails are removed. Contributors objects are then potentially re-serialized before being written to the package file (unless you opt for a different format)
+**NOTE**: this package internally deserialize the contributors to
+objects (name, email, url) and make sure duplicated emails are removed.
+Contributors objects are then potentially re-serialized before being written
+to the package file (unless you opt for a different format)
 
 ## Usage
 
@@ -69,8 +74,10 @@ The plugin can be configured in the [**semantic-release** configuration file](ht
 ```
 
 With this example:
-- the contributors will be stringified to `name <email>`
-- the package file containing the contributors will be read then updated in the current directory
+
+* the contributors will be stringified to `name <email>`
+* the package file containing the contributors will be read
+then updated in the current directory
 
 ## Configuration
 
@@ -83,8 +90,8 @@ With this example:
 
 ## Similar or related projects
 
-- [parse-author](https://www.npmjs.com/package/parse-author)
-- [stringify-author](https://www.npmjs.com/package/stringify-author)
+* [parse-author](https://www.npmjs.com/package/parse-author)
+* [stringify-author](https://www.npmjs.com/package/stringify-author)
 
 <p align="center">
   <img alt="Kill all humans" src="media/bender-with-memory.jpg">
