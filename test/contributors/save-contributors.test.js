@@ -3,7 +3,7 @@ import test from 'ava';
 import {stub} from 'sinon';
 import tempy from 'tempy';
 import {outputJson, readJson} from 'fs-extra';
-import saveContributors from '../lib/save-contributors';
+import saveContributors from '../../lib/contributors/save-contributors';
 
 test.beforeEach((t) => {
   // Stub the logger functions

@@ -1,6 +1,6 @@
 import test from 'ava';
 import {stub} from 'sinon';
-import getContributors from '../lib/get-contributors-from-commits';
+import getContributorsFromCommits from '../../lib/contributors/get-contributors-from-commits';
 
 test.beforeEach((t) => {
   // Stub the logger functions
@@ -17,7 +17,7 @@ test.beforeEach((t) => {
 });
 
 test('Extract an empty list if the commit list is empty', (t) => {
-  const contributors = getContributors();
+  const contributors = getContributorsFromCommits();
 
   t.is(contributors.length, 0);
 });
@@ -26,7 +26,7 @@ test('Extract a list of contributors from a commits list', (t) => {
   const firstCommiterName = 'John Doe';
   const secondCommiterEmail = 'john.smith@domain.tld';
 
-  const contributors = getContributors([
+  const contributors = getContributorsFromCommits([
     {
       message: 'feat(something): add something',
       author: {
@@ -52,7 +52,7 @@ test('Removes duplicates email from the commiters list', (t) => {
   const name = 'John Doe';
   const email = 'john.doe@domain.tld';
 
-  const contributors = getContributors([
+  const contributors = getContributorsFromCommits([
     {
       message: 'feat(something): add something',
       author: {

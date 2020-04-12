@@ -1,6 +1,6 @@
 import test from 'ava';
 import {stub} from 'sinon';
-import mergeContributors from '../lib/merge-contributors';
+import mergeContributors from '../../lib/contributors/merge-contributors';
 
 test.beforeEach((t) => {
   // Stub the logger functions
