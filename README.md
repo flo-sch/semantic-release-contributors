@@ -59,7 +59,7 @@ to the [contributors list of your package.json](https://docs.npmjs.com/files/pac
 
 If `Paul Smith` commits to a project with the following set-up:
 
-```json
+```json5
 {
   "name": "your-project",
   "author": "Barney Rubble <b@rubble.com>",
@@ -71,7 +71,7 @@ If `Paul Smith` commits to a project with the following set-up:
 
 The `package.json` file would then be updated to:
 
-```json
+```json5
 {
   "name": "your-project",
   "author": "Barney Rubble <b@rubble.com>",
@@ -95,7 +95,7 @@ The plugin can be configured in the [**semantic-release** configuration file](ht
 and do not commit the updated package.json file itself,
 it *requires* to be placed *before* "@semantic-release/git".
 
-```json
+```json5
 {
   "plugins": [
     // important: insert it before @semantic-release/git
