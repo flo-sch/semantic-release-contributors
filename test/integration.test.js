@@ -5,7 +5,7 @@ import {spy} from 'sinon';
 import tempy from 'tempy';
 
 test.beforeEach((t) => {
-  t.context.m = require('..');
+  t.context.m = require('../lib');
 
   const log = spy();
   t.context.log = log;

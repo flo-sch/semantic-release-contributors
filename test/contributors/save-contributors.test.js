@@ -2,8 +2,9 @@ import path from 'path';
 import test from 'ava';
 import {stub} from 'sinon';
 import tempy from 'tempy';
-import {outputJson, readJson} from 'fs-extra';
-import saveContributors from '../lib/save-contributors';
+import {readFile} from 'jsonfile';
+import {outputJson} from 'fs-extra';
+import saveContributors from '../../lib/contributors/save-contributors';
 
 test.beforeEach((t) => {
   // Stub the logger functions
@@ -62,7 +63,7 @@ test('Save an updated list of contributors in "string" format', async (t) => {
     );
   });
 
-  pkg = await readJson(filepath);
+  pkg = await readFile(filepath);
 
   t.is(pkg.contributors.length, 2);
   t.is(typeof pkg.contributors[0], 'string');
@@ -97,7 +98,7 @@ test('Save an updated list of contributors in "object" format', async (t) => {
     );
   });
 
-  pkg = await readJson(filepath);
+  pkg = await readFile(filepath);
 
   t.is(pkg.contributors.length, 2);
   t.is(typeof pkg.contributors[0], 'object');
