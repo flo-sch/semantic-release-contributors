@@ -8,6 +8,9 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/0c542e19db095ddb9947/maintainability)](https://codeclimate.com/github/flo-sch/semantic-release-contributors/maintainability)
 
 [![npm latest version](https://img.shields.io/npm/v/semantic-release-contributors/latest.svg)](https://www.npmjs.com/package/semantic-release-contributors)
+![npm bundle size](https://img.shields.io/bundlephobia/min/semantic-release-contributors)
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/semantic-release-contributors)
+![NPM](https://img.shields.io/npm/l/semantic-release-contributors)
 
 | Step           | Description                                                                                                |
 |----------------|------------------------------------------------------------------------------------------------------------|
