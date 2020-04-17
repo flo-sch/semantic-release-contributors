@@ -48,7 +48,6 @@
     "codecov": "codecov -f coverage/coverage-final.json",
     "commit": "git-cz",
     "lint": "xo",
-    "postinstall": "npm run build",
     "prebuild": "rimraf dist/*",
     "presemantic-release": "npm run build",
     "pretest": "npm run lint",
